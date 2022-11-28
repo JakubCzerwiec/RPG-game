@@ -87,13 +87,13 @@ const locations = [
     },
     {
       name: 'lose',
-      'button text': ['REPLAY?', 'REPLAY', 'REPLAY'],
+      'button text': ['REPLAY?', 'REPLAY?', 'REPLAY?'],
       'button functions': [restart, restart, restart],
       text: 'You die'
     },
     {
       name: 'win',
-      'button text': ['REPLAY?', 'REPLAY', 'REPLAY'],
+      'button text': ['REPLAY?', 'REPLAY?', 'REPLAY?'],
       'button functions': [restart, restart, restart],
       text: 'You defeat the dragon! YOU WIN THE GAME!'
     }
@@ -107,7 +107,7 @@ button3.onclick = fightDragon;
 function update (location) {
   monsterStats.style.display = 'none';
   button1.innerText = location['button text'][0];
-  button2.innetText = location['button text'][1];
+  button2.innerText = location['button text'][1];
   button3.innerText = location['button text'][2];
 
   button1.onclick = location['button functions'][0];
@@ -238,7 +238,7 @@ function restart () {
   inventory = ['stick'];
   goldText.innerText = gold;
   healthText.innerText = health;
-  xpText = xp;
+  xpText.innerText = xp;
   goTown()
 
 }
